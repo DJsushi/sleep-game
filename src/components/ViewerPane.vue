@@ -18,7 +18,7 @@ defineProps<{
         <p class="muted">No image available. Add PSG screenshots to sleep-imgs.</p>
       </div>
     </div>
-    <p v-if="currentImage" class="filename">File: {{ currentImage.fileName }}</p>
+    <!-- <p v-if="currentImage" class="filename">File: {{ currentImage.fileName }}</p> -->
   </section>
 </template>
 

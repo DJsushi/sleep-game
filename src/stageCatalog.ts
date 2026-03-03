@@ -34,10 +34,16 @@ const detectStageKey = (fileName: string): StageKey | null => {
   return null
 }
 
-const imageModules = import.meta.glob('../sleep-imgs/*.{png,jpg,jpeg}', {
-  eager: true,
-  as: 'url',
-}) as Record<string, string>
+const imageModules = {
+  ...import.meta.glob('../sleep-imgs/*.{png,jpg,jpeg}', {
+    eager: true,
+    as: 'url',
+  }),
+  ...import.meta.glob('../python/imgs-cropped/*.{png,jpg,jpeg}', {
+    eager: true,
+    as: 'url',
+  }),
+} as Record<string, string>
 
 export const catalog: CatalogEntry[] = Object.entries(imageModules).flatMap(
   ([path, src]) => {
