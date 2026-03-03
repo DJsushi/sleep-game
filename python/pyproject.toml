@@ -1,0 +1,13 @@
+[project]
+name = "sleep-game"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "notebook>=7.5.4",
+    "numpy>=2.4.2",
+    "pillow>=12.1.1",
+    "pyedflib>=0.1.42",
+]
